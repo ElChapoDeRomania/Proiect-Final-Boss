@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Turism în Hunedoara</title>
+
+<style>
+:root {
+    --bg-color: #f4f4f4;
+    --card-bg: white;
+    --text-main: #34495e;
+    --text-p: #555;
+    --header-bg: #2c3e50;
+    --header-text: white;
+    --shadow: rgba(0,0,0,0.1);
+}
+
+body.dark-mode {
+    --bg-color: #1a1a1a;
+    --card-bg: #2d2d2d;
+    --text-main: #ecf0f1;
+    --text-p: #bdc3c7;
+    --header-bg: #000000;
+    --header-text: #ffffff;
+    --shadow: rgba(0,0,0,0.5);
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background: var(--bg-color);
+    color: var(--text-main);
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--header-text);
+    text-align: center;
+    padding: 40px 20px;
+}
+
+.btn-theme {
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background: #3498db;
+    color: white;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: center;
+    color: var(--text-main);
+}
+
+.obiective-container {
+    display: grid;
+    gap: 20px;
+    padding: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+@media only screen and (min-width: 1024px) {
+    .obiective-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+@media only screen and (max-width: 1023px) and (min-width: 600px) {
+    .obiective-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media only screen and (max-width: 599px) {
+    .obiective-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.obiectiv {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 3px 10px var(--shadow);
+}
+
+.obiectiv img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.obiectiv .info {
+    padding: 10px;
+}
+
+.detalii-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.detaliu {
+    background: var(--card-bg);
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px var(--shadow);
+}
+
+.detaliu img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.detaliu h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+body.dark-mode .detaliu h3 {
+    color: #ecf0f1;
+}
+
+.detaliu p {
+    color: var(--text-p);
+    text-align: justify;
+    line-height: 1.7;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>Obiective turistice din Hunedoara</h1>
+<button class="btn-theme" onclick="toggleTheme()">Schimbă Tema (Light/Dark)</button>
+</header>
+
+<h2>Rezumat obiective</h2>
+
+<div class="obiective-container">
+
+<div class="obiectiv">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2023/05/Castelul-Corvinilor-GO-Hunedoara-poza.jpg">
+<div class="info"><h3>Castelul Corvinilor</h3><p>Castel gotic medieval.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Sarmisegetusa_Regia_-_Templele_patrulatere_mici_-_Zona_sacra_%E2%80%93_Gradistea_Muntelui%2C_Muntii_Sureanu%2C_Hunedoara%2C_Romania_19.JPG">
+<div class="info"><h3>Sarmizegetusa Regia</h3><p>Capitala dacilor.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/10/14.jpg">
+<div class="info"><h3>Parcul Retezat</h3><p>Lacuri glaciare.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2024/04/3.jpg">
+<div class="info"><h3>Cetatea Devei</h3><p>Fortăreață medievală.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Densus.bis_piatra.N.jpg">
+<div class="info"><h3>Biserica Densuș</h3><p>Cea mai veche biserică.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/07/13151610_1704417316483878_7102045329369754077_n-1.jpg">
+<div class="info"><h3>Peștera Bolii</h3><p>Peșteră cu râu.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/08/11-1.jpg">
+<div class="info"><h3>Ulpia Traiana</h3><p>Oraș roman.</p></div>
+</div>
+
+<div class="obiectiv">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/10/478099_389062294506396_448220110_o.jpg">
+<div class="info"><h3>Mănăstirea Prislop</h3><p>Loc de pelerinaj.</p></div>
+</div>
+
+</div>
+
+<h2>Detalii istorice complete</h2>
+
+<div class="detalii-container">
+
+<div class="detaliu">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2023/05/Castelul-Corvinilor-GO-Hunedoara-poza.jpg">
+<h3>Castelul Corvinilor</h3>
+<p>
+Construit în secolul XV de Iancu de Hunedoara, castelul este una dintre cele mai importante fortărețe gotice din Europa.  
+A servit ca reședință nobiliară, dar și ca punct strategic militar.  
+Legenda spune că Vlad Țepeș a fost întemnițat aici.  
+Interiorul include săli medievale, turnuri de apărare și poduri suspendate impresionante.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/e/ec/Sarmisegetusa_Regia_-_Templele_patrulatere_mici_-_Zona_sacra_%E2%80%93_Gradistea_Muntelui%2C_Muntii_Sureanu%2C_Hunedoara%2C_Romania_19.JPG">
+<h3>Sarmizegetusa Regia</h3>
+<p>
+Capitala Regatului Dac, centrul politic și religios al dacilor.  
+Aici se aflau temple sacre, sanctuare circulare și fortificații complexe.  
+A fost distrusă după războaiele daco-romane din 106 d.Hr.  
+Astăzi este sit UNESCO și una dintre cele mai importante descoperiri arheologice din România.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/10/14.jpg">
+<h3>Parcul Național Retezat</h3>
+<p>
+Înființat în 1935, este primul parc național din România.  
+Conține peste 80 de lacuri glaciare formate în urma ghețarilor.  
+Cel mai mare este Lacul Bucura.  
+Este habitat pentru specii rare precum capra neagră, râsul și acvila de munte.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2024/04/3.jpg">
+<h3>Cetatea Devei</h3>
+<p>
+Construită pe un deal vulcanic, cetatea a avut rol defensiv în Transilvania medievală.  
+Oferă o priveliște spectaculoasă asupra văii Mureșului.  
+A fost folosită de-a lungul secolelor de diverse administrații militare.  
+Astăzi este un important obiectiv turistic accesibil și cu telecabina.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/94/Densus.bis_piatra.N.jpg">
+<h3>Biserica Densuș</h3>
+<p>
+Considerată cea mai veche biserică de piatră din România.  
+A fost construită folosind materiale romane de la Ulpia Traiana Sarmizegetusa.  
+Arhitectura sa este unică în Europa, combinând elemente romane și medievale.  
+Este datată aproximativ din secolul XIII.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/07/13151610_1704417316483878_7102045329369754077_n-1.jpg">
+<h3>Peștera Bolii</h3>
+<p>
+Peșteră naturală spectaculoasă străbătută de un râu subteran.  
+Este una dintre puținele peșteri din România complet accesibile turiștilor.  
+Are o acustică naturală deosebită, fiind folosită pentru concerte.  
+Formațiunile safe carstice sunt impresionante.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/08/11-1.jpg">
+<h3>Ulpia Traiana Sarmizegetusa</h3>
+<p>
+Oraș roman întemeiat de împăratul Traian după cucerirea Daciei.  
+A fost capitala provinciei romane Dacia.  
+Aici se găsesc ruine de temple, forum și amfiteatru roman.  
+Reprezintă una dintre cele mai importante dovezi ale civilizației romane din România.
+</p>
+</div>
+
+<div class="detaliu">
+<img src="https://www.gohunedoara.com/wp-content/uploads/2019/10/478099_389062294506396_448220110_o.jpg">
+<h3>Mănăstirea Prislop</h3>
+<p>
+Unul dintre cele mai importante locuri de pelerinaj din România.  
+Aici se află mormântul Părintelui Arsenie Boca.  
+Este situată într-o zonă montană liniștită, înconjurată de păduri.  
+Atrage anual zeci de mii de credincioși și turiști.
+</p>
+</div>
+
+</div>
+
+<script>
+function toggleTheme() {
+    document.body.classList.toggle("dark-mode");
+}
+</script>
+
+</body>
+</html>
